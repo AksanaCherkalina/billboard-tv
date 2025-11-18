@@ -40,20 +40,23 @@
         
         .video-container {
             position: absolute;
-            top: 13.5%;
-            left: 8.2%;
-            width: 83.6%;
-            height: 72.8%;
+            top: 13.3%;
+            left: 8%;
+            width: 84%;
+            height: 73%;
             overflow: hidden;
+            background: #000;
         }
         
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: 100%;
             border: none;
+            object-fit: cover;
         }
         
         @media (max-width: 768px) {
