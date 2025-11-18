@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billboard TV Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 1400px;
+            width: 100%;
+        }
+        
+        .tv-frame {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        
+        .tv-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .video-container {
+            position: absolute;
+            top: 13.2%;
+            left: 7.8%;
+            width: 84.4%;
+            height: 73.6%;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tv-frame">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'%3E%3Crect fill='%23e0e0e0' width='1400' height='900'/%3E%3Ctext x='700' y='450' font-family='Arial' font-size='24' fill='%23666' text-anchor='middle'%3EЗагрузка изображения...%3C/text%3E%3C/svg%3E" alt="Billboard TV" id="tvImage">
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://kinescope.io/embed/hzLpVTxjJJpXxVwQNEFYEh" 
+                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Изображение телевизора загружено
+        const imageUrl = 'https://i.imgur.com/9GYtipw.png';
+        document.getElementById('tvImage').src = imageUrl;
+    </script>
+</body>
+</html>
